@@ -1,3 +1,4 @@
+import Feed from "@Components/Feed";
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
     <p className="orange_gradient head_text text-center">
       AI Prompted  
       <br className="sm:hidden"/>
-      <span> Propts</span>
+      <span> Prompts</span>
 
 
     </p>
@@ -21,6 +22,10 @@ export default function Home() {
       In Growing world of AI , prompt sharing tool is very useful.
 
     </p>
+
+
+    <Feed />
+
     
    
    
