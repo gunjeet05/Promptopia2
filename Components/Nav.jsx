@@ -39,8 +39,9 @@ const Nav = () => {
                 
                 <button  className="black_btn" onClick={()=>signOut()}>SignOut</button>
                
-                
+                <Link href={'/profile'}>
                 <Image  className="rounded-full" src={session.user.image} alt="imageProfile" height={31} width={31}/>
+                </Link>
 
             </div>:<div>
                 {console.log("Provider in nav", Object.values(provider))}
@@ -65,7 +66,7 @@ const Nav = () => {
             toggle && 
             <div className="dropdown items-center">
                 {
-                    user?<div className="flex flex-col items-center justify-center">
+                   session?.user?<div className="flex flex-col items-center justify-center">
 
                         
                         <Link href={"/profile"} className="dropdown_link">

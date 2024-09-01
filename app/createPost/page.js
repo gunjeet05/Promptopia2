@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 
 export default function CreatePage() {
-  const [data, setData]=useState({prompt:' ', tag:' '});
+  const [data, setData]=useState({prompt:'', tag:''});
   const [submitting, setSubmitting]=useState(false);
   const {data:session}=useSession();
 
@@ -17,7 +17,7 @@ export default function CreatePage() {
   console.log(data);
   const handleSubmit=async(e)=>{
     e.preventDefault();
-    console.log("session in prompts", session.user.id);
+    //console.log("session in prompts", session.user.id);
     try{
       setSubmitting(true);
     const res=await fetch('/api/prompt/newPrompt',{
